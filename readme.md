@@ -5,10 +5,11 @@
 > * HTTP proxy
 > * Allow CORS
 > * Private mode (with custom access limits)
-> * Fix: Landing page
-> * Fix: Handle binary files
+> * FIX: Landing page
+> * FIX: Handle binary files
+> * FIX: Hide error message in production environment
 
-[Github CDN](https://github-cdn.now.sh) is [UNPKG](https://unpkg.com/) for Github — an unofficial content delivery network for repo assets on Github.
+[Github CDN](https://github.com/memset0/github-cdn) is [UNPKG](https://unpkg.com/) for Github — an unofficial content delivery network for repo assets on Github.
 
 ## 🚀 Usage
 
