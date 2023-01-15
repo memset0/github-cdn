@@ -1,7 +1,7 @@
 const mime = require('mime');
-const config = require('../config');
 const log = require('../lib/utils/log');
 const route = require('../lib/utils/route');
+const config = require('../lib/utils/config');
 const forbid = require('../lib/utils/forbid');
 const getGist = require('../lib/github/get-gist');
 

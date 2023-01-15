@@ -1,8 +1,7 @@
-const config = require('../config');
 const log = require('../lib/utils/log');
 const forbid = require('../lib/utils/forbid');
 const getRemoteInfo = require('../lib/github/get-remote-info');
-const githubConfig = require('../lib/utils/config');
+const config = require('../lib/utils/config');
 const route = require('../lib/utils/route');
 
 module.exports = route(async (req, res) => {
@@ -15,7 +14,7 @@ module.exports = route(async (req, res) => {
 	}
 
 	res
-		.assert(githubConfig.canAccess(query), 401, 'Restricted access')
+		.assert(config.canAccess(query), 401, 'Restricted access')
 		.assert(query.owner, 422, '`owner` must be passed in')
 		.assert(query.repo, 422, '`repo` must be passed in');
 
