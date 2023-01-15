@@ -3,7 +3,7 @@
 > This repo is forked and currently under development for my own propose. All newly added features may not be supported stably, and they are listed as follows:
 > 
 > * HTTP Proxy
-> * Private Mode (limited access)
+> * Private Mode (custom access limits)
 
 [Github CDN](https://github-cdn.now.sh) is [UNPKG](https://unpkg.com/) for Github — an unofficial content delivery network for repo assets on Github.
 
