@@ -3,6 +3,8 @@ module.exports = {
 	port: 3005,
 	// 是否启用代理，不启用设为 false
 	proxy: false,
+	// 是否允许 CORS，不启用设为 false
+	allowCors: true,
 
 	// 私有模式，不启用设为 false
 	private: {
