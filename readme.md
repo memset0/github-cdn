@@ -33,7 +33,7 @@ _* Unless the request fails due to network failure or rate-limiting_
 ## 💁‍♀️ Endpoints
 - `/:owner/:repo`
   - Get the default branch and all refs (branches, tags, and PRs)
-  - eg. [`/vuejs/vue`](https://github-cdn.now.sh/vuejs/vue) to retrieve meta data on [vuejs/vue](https://github.com/vuejs/vue)
+  - eg. [`/vuejs/vue`](https://github-cdn.memset0.cn/vuejs/vue) to retrieve meta data on [vuejs/vue](https://github.com/vuejs/vue)
 
   <details>
   	<summary><i>Example output</i></summary>
@@ -51,30 +51,38 @@ _* Unless the request fails due to network failure or rate-limiting_
 
   </details>
 
-- `/:owner/:repo/:ref`
+- `/:owner/:repo`
+  
+  - Resolve repo ref with the default branch.
+  
+- `/:owner/:repo@:ref`
+
   - Resolve repo ref if semver. Redirects to root of repo ref
-  - eg. [`/vuejs/vue/master`](https://github-cdn.now.sh/vuejs/vue/master)
-  - eg. [`/vuejs/vue/^2.0.0`](https://github-cdn.now.sh/vuejs/vue/^2.0.0)
-  - eg. [`/vuejs/vue/latest`](https://github-cdn.now.sh/vuejs/vue/latest)
+  - eg. [`/vuejs/vue/master`](https://github-cdn.memset0.cn/vuejs/vue/master)
+  - eg. [`/vuejs/vue/^2.0.0`](https://github-cdn.memset0.cn/vuejs/vue/^2.0.0)
+  - eg. [`/vuejs/vue/latest`](https://github-cdn.memset0.cn/vuejs/vue/latest)
 
-- `/:owner/:repo/:ref?badge`
+- `/:owner/:repo@:ref?badge`
+
   - Resolves the ref and redirects to [Badgen](https://badgen.net)
-  - eg. `/vuejs/vue/latest?badge` ![Latest Vue badge](https://github-cdn.now.sh/vuejs/vue/latest?badge)
+  - eg. `/vuejs/vue/latest?badge` ![Latest Vue badge](https://github-cdn.memset0.cn/vuejs/vue/latest?badge)
 
-- `/:owner/:repo/:ref/:path`
+- `/:owner/:repo@:ref/:path`
+
   - Get a file or list directory in a repo ref
-  - eg. [`/vuejs/vue/v2.6.11/dist/`](https://github-cdn.now.sh/vuejs/vue/v2.6.11/dist/)
-  - eg. [`/vuejs/vue/v2.6.11/dist/vue.min.js`](https://github-cdn.now.sh/vuejs/vue/v2.6.11/dist/vue.min.js)
+  - eg. [`/vuejs/vue/v2.6.11/dist/`](https://github-cdn.memset0.cn/vuejs/vue/v2.6.11/dist/)
+  - eg. [`/vuejs/vue/v2.6.11/dist/vue.min.js`](https://github-cdn.memset0.cn/vuejs/vue/v2.6.11/dist/vue.min.js)
 
 - `/gist/:gist-id`
   - Get meta-data on a Gist: url, owner, created/updated date, and files
-  - eg. [`/gist/feff40b0a522f0c41c4eff0b77ea1d47`](https://github-cdn.now.sh/gist/feff40b0a522f0c41c4eff0b77ea1d47)
+  - eg. [`/gist/feff40b0a522f0c41c4eff0b77ea1d47`](https://github-cdn.memset0.cn/gist/feff40b0a522f0c41c4eff0b77ea1d47)
 
 - `/gist/:gist-id/:path`
   - Get a file from a Gist
-  - eg. [`/gist/feff40b0a522f0c41c4eff0b77ea1d47/tulip.jpg`](https://github-cdn.now.sh/gist/feff40b0a522f0c41c4eff0b77ea1d47/tulip.jpg)
+  - eg. [`/gist/feff40b0a522f0c41c4eff0b77ea1d47/tulip.jpg`](https://github-cdn.memset0.cn/gist/feff40b0a522f0c41c4eff0b77ea1d47/tulip.jpg)
 
 - `/ratelimit`
+
   - See the rate limit quota available on the Github API
   - With rate limiting, **Github CDN is not a production-ready solution** to hosting code
 
