@@ -1,6 +1,7 @@
 {
-  "name": "github-cdn",
-  "version": "1.0.0-rc.4",
+  "name": "memset0-github-cdn",
+  "private": true,
+  "version": "1.1.0",
   "description": "🛰 Github CDN Server",
   "keywords": [
     "github",
@@ -11,6 +12,9 @@
     "github-api"
   ],
   "author": "Hiroki Osame <hiroki.osame@gmail.com>",
+  "contributors": [
+    "memset0 <memset0@outlook.com>"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -19,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/privatenumber/github-cdn/issues"
   },
-  "homepage": "https://github-cdn.now.sh",
+  "homepage": "https://github.com/memset0/github-cdn",
   "files": [
     "lib",
     "api",
@@ -35,6 +39,7 @@
     "cookie-parser": "^1.4.5",
     "cosmiconfig": "^6.0.0",
     "debug": "^4.1.1",
+    "express": "^4.17.1",
     "got": "^10.7.0",
     "isomorphic-git": "^1.4.0",
     "keyv": "^4.0.0",
@@ -49,7 +54,6 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
-    "express": "^4.17.1",
     "nodemon": "^2.0.3",
     "standard-version": "^8.0.0"
   },
