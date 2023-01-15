@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
     "cosmiconfig": "^6.0.0",
     "debug": "^4.1.1",
     "express": "^4.17.1",
