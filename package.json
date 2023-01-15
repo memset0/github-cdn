@@ -31,6 +31,7 @@
   ],
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "dev": "cd dev-server && DEBUG=github-cdn nodemon . --watch ..",
     "lint": "eslint .",
     "version": "standard-version --preset angular"
