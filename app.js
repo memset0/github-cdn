@@ -7,7 +7,7 @@ const config = require('./lib/utils/config');
 const githubCdnRouter = require('.');
 
 const debug = Debug('github-cdn');
-const { port = 3005 } = require('./config');
+const { port = 3005 } = config;
 
 const app = express();
 
