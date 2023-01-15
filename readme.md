@@ -31,6 +31,7 @@ npm start
 _* Unless the request fails due to network failure or rate-limiting_
 
 ## 💁‍♀️ Endpoints
+
 - `/:owner/:repo`
   - Get the default branch and all refs (branches, tags, and PRs)
   - eg. [`/vuejs/vue`](https://github-cdn.memset0.cn/vuejs/vue) to retrieve meta data on [vuejs/vue](https://github.com/vuejs/vue)
@@ -51,10 +52,6 @@ _* Unless the request fails due to network failure or rate-limiting_
 
   </details>
 
-- `/:owner/:repo`
-  
-  - Resolve repo ref with the default branch.
-  
 - `/:owner/:repo@:ref`
 
   - Resolve repo ref if semver. Redirects to root of repo ref

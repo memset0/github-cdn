@@ -51,6 +51,7 @@ const landingTpl = `
 	fetch('${config.landingPageMdSrc}')
 		.then(r => r.text())
 		.then(mdStr => {
+			mdStr = mdStr.replace(/https\\:\\/\\/github\\-cdn\\.memset0\\.cn\\//g, '/');
 			md.innerHTML = marked.parse(mdStr);
 
 			const firstHeading = document.querySelector('h1');
