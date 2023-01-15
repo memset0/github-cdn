@@ -9,7 +9,11 @@ const route = require('../lib/utils/route');
 
 const constructUrl = ({
 	owner, repo, ref, badge, path = '',
-}) => `/${owner}/${repo}/${ref}${path}${(badge === '') ? '?badge' : ''}`;
+}) => (
+	ref
+		? `/${owner}/${repo}@${ref}${path}${(badge === '') ? '?badge' : ''}`
+		: `/${owner}/${repo}${path}${(badge === '') ? '?badge' : ''}`
+);
 
 module.exports = route(async (req, res) => {
 	log('[req:get-path]', req.url);

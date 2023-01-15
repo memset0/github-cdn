@@ -5,6 +5,8 @@
 		"indent": "off",
 		"indent-legacy": ["error", "tab"],
 		"no-tabs": "off",
-		"linebreak-style": "off"
+
+		"linebreak-style": "off",
+		"no-param-reassign"
 	}
 }

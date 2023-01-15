@@ -23,7 +23,11 @@
 			"dest": "/api/get-repo?owner=$1&repo=$2"
 		},
 		{
-			"src": "/([^/]+)/([^/]+)/([^/]*)(/.*)?",
+			"src": "/([^/]+)/([^/]+)(/.*)?",
+			"dest": "/api/get-path?owner=$1&repo=$2&path=$3"
+		},
+		{
+			"src": "/([^/]+)/([^/]+)@([^/]+)(/.*)?",
 			"dest": "/api/get-path?owner=$1&repo=$2&ref=$3&path=$4"
 		}
 	]

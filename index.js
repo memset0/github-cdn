@@ -15,10 +15,15 @@ function githubCdnRouter() {
 		next();
 	});
 
+	router.get('/favicon.ico', (req, res) => {
+		res.status(404);
+	})
+
 	router.get('/ratelimit', getRatelimit);
 	router.get('/gist/:gistId?/:path?', getGist);
 	router.get('/:owner/:repo?', getRepo);
-	router.get('/:owner/:repo/:ref?:path(/*)?', getPath);
+	router.get('/:owner/:repo@:ref?:path(/*)?', getPath);
+	router.get('/:owner/:repo:path(/*)?', getPath);
 
 	return router;
 }

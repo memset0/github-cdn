@@ -4,6 +4,7 @@
 > 
 > * HTTP proxy
 > * Allow CORS
+> * New route and cache rules
 > * Private mode (with custom access limits)
 > * FIX: Landing page
 > * FIX: Handle binary files
