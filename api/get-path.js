@@ -1,11 +1,10 @@
 const mime = require('mime');
-const config = require('../config');
 const log = require('../lib/utils/log');
 const forbid = require('../lib/utils/forbid');
 const resolveRef = require('../lib/resolve-ref');
 const badgenUrl = require('../lib/badgen-url');
 const getPath = require('../lib/github/get-path');
-const githubConfig = require('../lib/utils/github-config');
+const config = require('../lib/utils/config');
 const route = require('../lib/utils/route');
 
 const constructUrl = ({
@@ -21,7 +20,7 @@ module.exports = route(async (req, res) => {
 		return forbid(res);
 	}
 
-	res.assert(githubConfig.canAccess(query), 401, 'Restricted access');
+	res.assert(config.canAccess(query), 401, 'Restricted access');
 
 	const resolved = await resolveRef(query);
 

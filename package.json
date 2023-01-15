@@ -49,7 +49,8 @@
     "keyv-memcache": "^0.8.0",
     "lodash": "^4.17.15",
     "mime": "^2.4.5",
-    "semver": "^7.3.2"
+    "semver": "^7.3.2",
+    "yaml": "^2.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

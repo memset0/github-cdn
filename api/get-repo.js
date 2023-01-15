@@ -2,7 +2,7 @@ const config = require('../config');
 const log = require('../lib/utils/log');
 const forbid = require('../lib/utils/forbid');
 const getRemoteInfo = require('../lib/github/get-remote-info');
-const githubConfig = require('../lib/utils/github-config');
+const githubConfig = require('../lib/utils/config');
 const route = require('../lib/utils/route');
 
 module.exports = route(async (req, res) => {
