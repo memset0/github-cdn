@@ -2,8 +2,14 @@
 
 > This repo is forked and currently under development for my own propose. All newly added features may not be supported stably, and they are listed as follows:
 > 
-> * HTTP Proxy
-> * Private Mode (custom access limits)
+> * HTTP proxy
+> * Allow CORS
+> * Private mode (with custom access limits)
+>
+> It also included following fixes:
+>
+> * Landing page
+> * Handle binary files
 
 [Github CDN](https://github-cdn.now.sh) is [UNPKG](https://unpkg.com/) for Github — an unofficial content delivery network for repo assets on Github.
 
