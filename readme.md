@@ -1,8 +1,9 @@
 # 🛰 Github CDN (Forked)
 
-> This repo is forked and developing for my own propose. All newly added features may not be supported stably, and they are listed as follows:
+> This repo is forked and under development for my own propose. All newly added features may not be supported stably, and they are listed as follows:
 > 
 > * HTTP Proxy
+> * Private Mode (limited access)
 
 [Github CDN](https://github-cdn.now.sh) is [UNPKG](https://unpkg.com/) for Github — an unofficial content delivery network for repo assets on Github.
 

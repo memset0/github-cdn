@@ -1,4 +1,4 @@
-const config = require('../lib/utils/config');
+const config = require('../lib/utils/github-config');
 const log = require('../lib/utils/log');
 
 const assets = {

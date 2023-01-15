@@ -1,6 +1,8 @@
 const mime = require('mime');
+const config = require('../config');
 const log = require('../lib/utils/log');
 const route = require('../lib/utils/route');
+const forbid = require('../lib/utils/forbid');
 const getGist = require('../lib/github/get-gist');
 
 module.exports = route(async (req, res) => {
@@ -11,6 +13,11 @@ module.exports = route(async (req, res) => {
 	res.assert(query.gistId, 422, '`gistId` must be passed in');
 
 	const { source, data } = await getGist(query);
+
+	if (config.private && !(data.owner && config.private.owners.includes(data.owner))) {
+		forbid(res);
+		return;
+	}
 
 	res
 		.headers({

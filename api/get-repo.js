@@ -1,6 +1,8 @@
+const config = require('../config');
 const log = require('../lib/utils/log');
+const forbid = require('../lib/utils/forbid');
 const getRemoteInfo = require('../lib/github/get-remote-info');
-const config = require('../lib/utils/config');
+const githubConfig = require('../lib/utils/github-config');
 const route = require('../lib/utils/route');
 
 module.exports = route(async (req, res) => {
@@ -8,8 +10,12 @@ module.exports = route(async (req, res) => {
 
 	const query = { ...req.cookies, ...req.query, ...req.params };
 
+	if (config.private && !(query.owner && config.private.owners.includes(query.owner))) {
+		return forbid(res);
+	}
+
 	res
-		.assert(config.canAccess(query), 401, 'Restricted access')
+		.assert(githubConfig.canAccess(query), 401, 'Restricted access')
 		.assert(query.owner, 422, '`owner` must be passed in')
 		.assert(query.repo, 422, '`repo` must be passed in');
 

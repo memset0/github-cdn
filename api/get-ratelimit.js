@@ -1,6 +1,6 @@
 const log = require('../lib/utils/log');
 const githubApi = require('../lib/utils/github-api');
-const { github } = require('../lib/utils/config');
+const { github } = require('../lib/utils/github-config');
 const route = require('../lib/utils/route');
 
 module.exports = route(async (req, res) => {
