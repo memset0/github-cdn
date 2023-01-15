@@ -5,13 +5,18 @@
 > * HTTP proxy
 > * Allow CORS
 > * Private mode (with custom access limits)
->
-> It also included following fixes:
->
-> * Landing page
-> * Handle binary files
+> * Fix: Landing page
+> * Fix: Handle binary files
 
 [Github CDN](https://github-cdn.now.sh) is [UNPKG](https://unpkg.com/) for Github — an unofficial content delivery network for repo assets on Github.
+
+## 🚀 Usage
+
+```
+cp githubcdn.config.sample.js githubcdn.config.js
+npm install
+npm start
+```
 
 ## ⭐️ Features
 - Fetch repo meta-data: branches, tags, and PRs
