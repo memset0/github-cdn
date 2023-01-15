@@ -46,12 +46,12 @@ const landingTpl = `
 </head>
 <body>
 	<div id="md" class="markdown-body">Loading...</div>
-	${assets.js.map((s) => `<script src="${s}" defer></script>`).join('')}
+	${assets.js.map((s) => `<script src="${s}"></script>`).join('')}
 	<script type="text/javascript">
 	fetch('${config.landingPageMdSrc}')
 		.then(r => r.text())
 		.then(mdStr => {
-			md.innerHTML = marked(mdStr);
+			md.innerHTML = marked.parse(mdStr);
 
 			const firstHeading = document.querySelector('h1');
 			document.title = firstHeading.innerText;

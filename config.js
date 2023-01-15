@@ -8,6 +8,7 @@ module.exports = {
 	private: {
 		// 仓库所有者，仅这个列表中的所有者的仓库可被访问
 		owners: [
+			'memset0',
 			'mem-static',
 		],
 	},

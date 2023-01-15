@@ -1,6 +1,6 @@
 # 🛰 Github CDN (Forked)
 
-> This repo is forked and under development for my own propose. All newly added features may not be supported stably, and they are listed as follows:
+> This repo is forked and currently under development for my own propose. All newly added features may not be supported stably, and they are listed as follows:
 > 
 > * HTTP Proxy
 > * Private Mode (limited access)
