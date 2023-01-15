@@ -1,4 +1,8 @@
-# 🛰 Github CDN [![GitHub stars](https://img.shields.io/github/stars/privatenumber/github-cdn.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/privatenumber/github-cdn)
+# 🛰 Github CDN (Forked)
+
+> This repo is forked and developing for my own propose. All newly added features may not be supported stably, and they are listed as follows:
+> 
+> * HTTP Proxy
 
 [Github CDN](https://github-cdn.now.sh) is [UNPKG](https://unpkg.com/) for Github — an unofficial content delivery network for repo assets on Github.
 
