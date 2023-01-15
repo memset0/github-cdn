@@ -42,6 +42,7 @@ module.exports = route(async (req, res) => {
 	}
 
 	const { source, data } = await getPath(query);
+
 	res
 		.headers({
 			'X-GITHUB-CDN-SOURCE': source,
